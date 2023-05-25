@@ -23,7 +23,7 @@ def main():
     bpy.data.scenes["Scene"].render.image_settings.file_format = 'BMP'
 
     # 指定投影的条纹图
-    for i in range(12):
+    for i in range(9, 12):
         fringe_light(i+1)
 
         # 渲染图片保存路径
@@ -91,7 +91,7 @@ def main():
             # 每张之间的角度间隔
             div_angle = 4.5
             # 渲染张数
-            loc_total_num = 4
+            loc_total_num = 1
             # 渲染函数
             rendering(obj, obj_name, loc_total_num, div_angle, render_path)
             print("render done stl {}".format(item))
